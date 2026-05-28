@@ -54,6 +54,30 @@
             color: #a0a0a0;
             display: block;
             font-style: italic;
+            margin-bottom: 30px; /* Mezera nad tlačítkem */
+        }
+        /* Styly pro nové tlačítko */
+        .btn-beta {
+            display: inline-block;
+            background-color: #00adb5;
+            color: #ffffff;
+            font-size: 1.4rem;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 15px rgba(0, 173, 181, 0.3);
+        }
+        .btn-beta:hover {
+            background-color: #00cdba;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 173, 181, 0.5);
+        }
+        .btn-beta:active {
+            transform: translateY(1px);
         }
     </style>
 </head>
@@ -63,11 +87,10 @@
         <h1>UNGA BUNGA</h1>
         <p>Ahoj světe! 👋</p>
         <div class="status">Probíhá příprava stránky...</div>
-        <span class="info-patek">Stránka bude připravena mezi 1.6 - 5.6       (právě probíhá: kódování a propojování webu)</span>
-        <a href="https://vas-odkaz.cz" style="display: inline-block; padding: 12px 24px; background-color: #4CAF50; color: white; text-decoration: none; font-family: sans-serif; font-weight: bold; border-radius: 5px; text-align: center;">
-         Beta verze
-        </a>
-
+        <span class="info-patek">Stránka bude připravena mezi 29.5 - 6.6 (právě prbíhá: kódování a propojování webu)</span>
+        
+        <!-- Odkaz na Beta verzi v podobě tlačítka -->
+        <a href="https://tondafox-site.github.io/Beta/" class="btn-beta">Beta verze</a>
     </div>
 
 </body>
