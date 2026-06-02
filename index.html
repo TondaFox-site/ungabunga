@@ -1112,12 +1112,12 @@ Ban
 Unban
 </button>
 
-<button onclick="muteUser('${uid}')">
-Mute
+<button onclick="verifyUser('${uid}')">
+Ověřit
 </button>
 
-<button onclick="unmuteUser('${uid}')">
-Unmute
+<button onclick="deleteAccountAdmin('${uid}')">
+Smazat účet
 </button>
 
 <button onclick="giveMoney('${uid}')">
@@ -1163,27 +1163,33 @@ banned:false
 
 };
 
-window.muteUser =
+window.verifyUser =
 async function(uid){
 
 await update(
 ref(db,"users/"+uid),
 {
-muted:true
+verified:true
 }
 );
+
+alert("Účet ověřen");
 
 };
 
-window.unmuteUser =
+window.deleteAccountAdmin =
 async function(uid){
 
-await update(
-ref(db,"users/"+uid),
-{
-muted:false
-}
+let sure =
+confirm("Smazat účet?");
+
+if(!sure) return;
+
+await remove(
+ref(db,"users/"+uid)
 );
+
+alert("Účet smazán");
 
 };
 
